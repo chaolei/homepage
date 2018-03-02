@@ -1,0 +1,261 @@
+.person{
+	position: absolute;
+	width: 80px;
+	height: 170px;
+	left: 450px;
+	bottom: 155px;
+	z-index: 1;
+
+	.head{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		background: #FDC689;
+		z-index: 1;
+
+		.hair{
+			position: absolute;
+			top: -10px;
+			left: 0;
+			width: 80px;
+			height: 40px;			
+			border-top-left-radius: 40px;
+			border-top-right-radius: 40px;
+			background: #000000;
+
+			.hair-left{
+			    position: absolute;
+			    top: 25px;
+			    left: -5px;
+			    width: 25px;
+			    height: 50px;
+			    border-top-left-radius: 25px;
+			    border-bottom-left-radius: 25px;
+			    background: #000000;
+			}
+		}
+		.ear{
+			position: absolute;
+			left: 0;
+			top: 35px;
+			width: 15px;
+			height: 15px;
+			border-radius: 100%;
+			background: #FDC689;
+		}
+		.mouse{
+			position: absolute;
+			left: 30px;
+			top: 60px;
+			width: 40px;
+			height: 10px;
+			border-radius: 5px;
+			background: #F26C4F
+		}
+		.mouse:after{
+			position: absolute;
+			content: '';
+			left: 5px;
+			top: 4px;
+			width: 30px;
+			height: 2;
+			border-radius: 1px;
+			background: #ED1C24;
+		}
+		.glass{
+			position: absolute;
+			top: 32px;
+			left: 35px;
+			width: 50px;
+			height: 22px;
+			.glass1{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 22px;
+				height: 22px;
+				border-radius: 100%;
+				background: #fff;
+				
+				.eye1{
+					position: absolute;
+					left: 9px;
+					top: 9px;;
+					width: 4px;
+					height:4px;
+					border-radius: 100%;
+					background: #000;
+				}
+			}
+			.glass1:before{
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				width: 18px;
+				height: 18px;
+				border-radius: 100%;
+				border: 2px solid #ED1C24;
+			}
+			.glass2{
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 22px;
+				height: 22px;
+				border-radius: 100%;
+				background: #fff;
+				
+				.eye2{
+					position: absolute;
+					left: 9px;
+					top: 9px;;
+					width: 4px;
+					height:4px;
+					border-radius: 100%;
+					background: #000;
+				}
+			}
+			.glass2:before{
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				width: 18px;
+				height: 18px;
+				border-radius: 100%;
+				border: 2px solid #ED1C24;
+			}
+		}
+		.glass:before{
+			position: absolute;
+		    left: -22px;
+		    top: 6px;
+		    content: '';
+		    width: 25px;
+		    height: 2px;
+		    background: #ED1C23;
+		    transform: rotate(14deg);
+		}
+		.glass:after{
+			position: absolute;
+			left: 22px;
+			top: 10px;
+			content: '';
+			width: 8px;
+			height:2px;
+			background: #ED1C24;
+		}
+	}
+	.body{
+		position: absolute;
+		top: 75px;
+		left: 50%;
+		margin-left: -21px;
+		width: 42px;
+		height: 45px;
+		background: #F7941D;
+
+		.lefthand{
+			position: absolute;
+			left: -45px;
+			top: 0;
+			width: 45px;
+			height: 40px;
+			overflow: hidden;			
+		}
+		.lefthand:before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			width: 80px;
+			height: 80px;
+			border: 12px solid #F7941D;
+			border-radius: 100%;
+		}
+		.leftfist{
+			position: absolute;
+			left: -45px;
+			bottom: 0;
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			background: #FDC689;
+		}
+
+		.righthand{
+			position: absolute;
+		    right: -45px;
+		    top: 0;
+		    width: 45px;
+		    height: 40px;
+		    overflow: hidden;			
+		}
+		.righthand:before{
+			position: absolute;
+			content: '';
+			right: 0;
+			top: 0;
+			width: 80px;
+			height: 80px;
+			border: 12px solid #F7941D;
+			border-radius: 100%;
+		}
+		.rightfist{
+			position: absolute;
+			right: -45px;
+			bottom: 0;
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			background: #FDC689;
+		}
+	}
+	.trousers{
+		position: absolute;
+		top: 120px;
+		left: 50%;
+		margin-left: -21px;
+		width: 42px;
+		height: 15px;
+		background: #ED1C24;
+	}
+	.foot1{
+		position: absolute;
+		top: 135px;
+		left: 19px;
+		width: 15px;
+		height: 18px;
+		background: #F7941D;
+		.shoes1{
+			position: absolute;
+			right: 0;
+			width: 30px;
+			height: 15px;
+			bottom: -15px;
+			background: #ED1C24;
+		}
+	}
+	.foot2{
+		position: absolute;
+		top: 135px;
+		right: 19px;
+		width: 15px;
+		height: 18px;
+		background: #F7941D;
+		.shoes2{
+			position: absolute;
+			left: 0;
+			width: 30px;
+			height: 15px;
+			bottom: -15px;
+			background: #ED1C24;
+		}
+
+	}
+
+}
