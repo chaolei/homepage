@@ -1,0 +1,57 @@
+.level{
+	position: fixed;
+	width: 320px;
+	height: 300px;
+	bottom: 155px;
+	z-index: 1;
+
+	.level-words{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 280px;
+		height: 100px;
+		background: #ED1C24;
+		color: #fff;
+		font-size: 40px;
+		font-weight: bold;
+		line-height: 100px;
+		text-align: center;
+		font-family: 'frankfurter-plain';
+	}
+	.level-left{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 40px;
+		background: #ED1C24;
+		height: 200px;
+	}
+	.level-left:after{
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 40px;
+		width: 40px;
+		background: #BC0017;
+		height: 200px;
+	}
+	.level-right{
+		position: absolute;
+		bottom: 0;
+		right: 40px;
+		width: 40px;
+		background: #ED1C24;
+		height: 200px;	
+	}
+	.level-right:after{
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 40px;
+		width: 40px;
+		background: #BC0017;
+		height: 300px;	
+	}
+
+}

@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {//注意这里是exports不是export
 	devtool: '#cheap-module-eval-source-map',
-    entry: ['webpack/hot/dev-server', __dirname + '/app/main.js'],//唯一入口文件，就像Java中的main方法
+    entry: ['webpack/hot/dev-server', __dirname + '/app/main.js'],//唯一入口文件
     output: {//输出目录
         path: __dirname,//打包后的js文件存放的地方
         filename: "bundle.js"//打包后的js文件名
@@ -29,6 +29,9 @@ module.exports = {//注意这里是exports不是export
             },{
                 test: /\.(ico|png|gif|jpg|jpeg)$/,
                 loader: 'url-loader'
+            },{
+                test: /\.(eot|svg|ttf|woff|woff2)\??.*$/,
+                loader: 'url-loader?name=fonts/[name].[md5:hash:hex:7].[ext]'
             }
         ]
     },

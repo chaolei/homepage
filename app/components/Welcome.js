@@ -13,14 +13,14 @@ class Tree extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-    	let move = 100 - nextProps.move;
+    	let move = 80 - nextProps.move;
     	this.setState({move: move});
     }
 
 	render() {
 		return (
 			<div className="welcome" style={{top: this.state.move}}>
-				<div className="wel-words">Welcome<br/> to<br/> my site</div>
+				<div className="wel-words">WELCOME<br/> TO<br/> LEICHAO'S SITE</div>
 			</div>
 		)
 	}
