@@ -6,6 +6,8 @@ import Welcome from './Welcome';
 import Moutain from './Moutain';
 import Level from './Level';
 import About from './About';
+import Life from './Life';
+import Step from './Step';
 
 import './style/index.less';
 
@@ -17,11 +19,12 @@ class HelloWorld extends React.Component {
         this.state = {
         	footerWidth: window.innerWidth,
         	move: 0
-        }
+        };
+        this.handleScroll = this.handleScroll.bind(this)
     }
 
     componentWillMount() {
-    	//this.setState({footerWidth: window.innerWidth - document.querySelector('.scene').style.width});
+    	window.addEventListener('scroll', this.handleScroll);
     }
 
     componentDidMount() {
@@ -29,13 +32,13 @@ class HelloWorld extends React.Component {
     }
 
 	handleScroll(ev){
-		let height = ev.target.scrollTop;
+		let height = document.body.scrollTop;
 		this.setState({move: height});
 	}
 
 	render() {
 		return (
-			<div className="container" ref="bodyBox" onScroll={(ev)=>{this.handleScroll.call(this, ev)}}>
+			<div className="container">
 				<div className="scene">
 
 					<Welcome move={this.state.move}/>
@@ -52,6 +55,15 @@ class HelloWorld extends React.Component {
 					<Tree move={this.state.move} position={2650} height={40} bigNum={100}/>
 					<About move={this.state.move} position={2800}/>
 
+					<Step move={this.state.move} position={3850}/>
+
+					<Tree move={this.state.move} position={4300} height={120} bigNum={150}/>
+                	<Tree move={this.state.move} position={4450} height={120} bigNum={150}  color='spe'/>
+                	<Tree move={this.state.move} position={4600} height={120} bigNum={150}/>
+                	<Tree move={this.state.move} position={4750} height={120} bigNum={150} color='spe'/>
+                	<Tree move={this.state.move} position={4900} height={120} bigNum={150}/>
+                	<Tree move={this.state.move} position={5050} height={120} bigNum={150} color='spe'/>
+					<Life move={this.state.move} position={4300}/>
 
 					<Person move={this.state.move}/>
 					<div className="footer" style={{width:this.state.footerWidth}}></div>

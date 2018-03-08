@@ -1,0 +1,140 @@
+.life{
+	position: fixed;
+	top: 0;
+	width: 930px;
+	bottom: 225px;
+	z-index: 1;
+	font-size: 20px;
+	font-family: 'frankfurter-plain';
+	overflow-x: hidden;
+
+	.life-title{
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		line-height: 50px;
+		color: #fff;
+		font-family: 'lobster';
+		text-align: center;
+		height: 50px;
+		background: #ED1C24;
+		letter-spacing: 5px;
+    	font-size: 25px;
+	}
+	.panda{
+		position: absolute;
+		bottom: 0;
+		left: 930px;
+		transition: left 0.5s;
+
+		.panda-head{
+			position: absolute;
+			left: 0;
+			bottom: 0px;
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			border: 1px solid #000;
+			background: #fff;
+
+			.eye-left{
+				position: absolute;
+				left: 20px;
+				top: 35px;
+				width: 20px;
+				height: 18px;
+				border-radius: 9px;
+				background: #000;
+   				transform: rotate(-30deg);
+			}
+			.eye-left:after{
+				position: absolute;
+				content: '';
+				top: 5px;
+				right: 5px;
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+				background: #fff;
+			}
+			.eye-right{
+				position: absolute;
+				right: 20px;
+				top: 35px;
+				width: 20px;
+				height: 18px;
+				border-radius: 9px;
+				background: #000;
+   				transform: rotate(30deg);
+			}
+			.eye-right:after{
+				position: absolute;
+				content: '';
+				top: 5px;
+				left: 5px;
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+				background: #fff;
+			}
+			.p-noise{
+				position: absolute;
+				left: 50%;
+				top: 65px;
+				margin-left: -5px;
+				width: 10px;
+				height: 8px;
+				border-radius: 4px;
+				background: #000;
+			}
+			.p-mouse{
+				position: absolute;
+				left: 50%;
+				top: 85px;
+				margin-left: -10px;
+				width: 20px;
+				height: 2px;
+				border-radius: 1px;
+				background: #ccc;
+			}
+		}
+		.panda-head:before{
+			position: absolute;
+			content: '';
+			left: -27px;
+			top: 10px;
+			width: 40px;
+			height: 30px;
+			border-radius: 15px;
+			background: #000;
+			transform: rotate(118deg);
+		}
+		.panda-head:after{
+			position: absolute;
+			content: '';
+			right: -27px;
+			top: 10px;
+			width: 40px;
+			height: 30px;
+			border-radius: 15px;
+			background: #000;
+			transform: rotate(60deg);
+		}
+	}
+	.hotpot{
+		position: absolute;
+		bottom: 0;
+		left: 1530px;
+		background: #000;
+		width: 100px;
+		height: 100px;
+		transition: left 0.5s;
+	}
+	.panda.show{
+		left: 200px;
+	}
+	.hotpot.show{
+		left: 500px;
+	}
+}

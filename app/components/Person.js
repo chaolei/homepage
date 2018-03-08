@@ -8,7 +8,8 @@ class Person extends React.Component {
 	constructor(props, context) {
         super(props, context);
         this.state = {
-        	move: 0
+        	move: 0,
+        	jump: false
         }
     }
 
@@ -16,11 +17,16 @@ class Person extends React.Component {
     	let move = 450 + nextProps.move;
     	this.setState({move: move});
     	console.log(nextProps.move);
+    	if(nextProps.move >= 3300 && nextProps.move <= 3700){
+    		this.setState({jump: true});
+    	}else{
+    		this.setState({jump: false});
+    	}
     }
 
 	render() {
 		return (
-			<div className="person" >
+			<div className={this.state.jump?'person up':'person'}>
 				<div className="head">
 					<div className="hair"><div className="hair-left"></div></div>
 					<div className="ear"></div>
