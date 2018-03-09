@@ -37,6 +37,7 @@ class Person extends React.Component {
 					</div>
 				</div>
 				<div className="body">
+					5
 					<div className="lefthand">						
 					</div>
 					<div className="leftfist">						

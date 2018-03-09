@@ -54,9 +54,27 @@ class About extends React.Component {
                         <div className="panda-rfoot"></div>
                     </div>
                 </div>
-                <div className={this.state.show?'hotpot show':'hotpot'}></div>
-
-                <div className={this.state.show?'about-result result1 show':'about-result result1'}></div>
+                <div className={this.state.show?'hotpot show':'hotpot'}>
+                    <div className="pot">
+                        <div className="left"></div>
+                        <div className="right"></div>
+                    </div>
+                    <div className="gas-area">
+                        <div className="gas"></div>
+                        <div className="gas gas1"></div>
+                    </div>
+                    <div className="case case1"></div>
+                    <div className="case case2"></div>
+                    <div className="case case3"></div>
+                    <div className="case case4"></div>
+                    <div className="case case5"></div>
+                    <div className="case case6"></div>
+                    <div className="case case7"></div>
+                    <div className="case case8"></div>
+                    <div className="case case9"></div>
+                    <div className="case case10"></div>
+                    <div className="chopsticks"><div className="meat"></div></div>
+                </div>
 			</div>
 		)
 	}
