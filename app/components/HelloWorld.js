@@ -8,6 +8,7 @@ import Level from './Level';
 import About from './About';
 import Life from './Life';
 import Step from './Step';
+import Hobby from './Hobby';
 
 import './style/index.less';
 
@@ -64,6 +65,9 @@ class HelloWorld extends React.Component {
                 	<Tree move={this.state.move} position={4900} height={120} bigNum={150}/>
                 	<Tree move={this.state.move} position={5050} height={120} bigNum={150} color='spe'/>
 					<Life move={this.state.move} position={4300}/>
+
+					<Tree move={this.state.move} position={5950} height={120} bigNum={150}/>
+					<Hobby move={this.state.move} position={5600}/>
 
 					<Person move={this.state.move}/>
 					<div className="footer" style={{width:this.state.footerWidth}}></div>
