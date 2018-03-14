@@ -9,7 +9,8 @@ class Person extends React.Component {
         super(props, context);
         this.state = {
         	move: 0,
-        	jump: false
+        	jump: false,
+        	level2: false
         }
     }
 
@@ -22,11 +23,16 @@ class Person extends React.Component {
     	}else{
     		this.setState({jump: false});
     	}
+    	if(nextProps.move >= 6350 && nextProps.move <= 7712){
+			this.setState({level2: true});
+		}else{
+			this.setState({level2: false});
+		}
     }
 
 	render() {
 		return (
-			<div className={this.state.jump?'person up':'person'}>
+			<div className={this.state.jump?'person up':(this.state.level2?'person level2':'person')}>
 				<div className="head">
 					<div className="hair"><div className="hair-left"></div></div>
 					<div className="ear"></div>

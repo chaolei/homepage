@@ -21,7 +21,7 @@ body,div,p,span{
 }
 body{
 	background: #00BFF3;
-	height: 8000px;
+	height: 9000px;
 }
 .container{
 	position: fixed;
@@ -36,9 +36,13 @@ body{
 }
 .footer{
 	position: fixed;
-	bottom: 0;
+	bottom: -500px;
 	left: 0;
-	height: 160px;
+	height: 660px;
 	width: 100%;
 	background: url('../images/footer.png') repeat-x;
+	transition: bottom 0.5s;
+}
+.footer.show{
+	bottom: -150px;
 }

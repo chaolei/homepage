@@ -9,6 +9,7 @@ import About from './About';
 import Life from './Life';
 import Step from './Step';
 import Hobby from './Hobby';
+import Skill from './Skill';
 
 import './style/index.less';
 
@@ -19,7 +20,8 @@ class HelloWorld extends React.Component {
         super(props, context);
         this.state = {
         	footerWidth: window.innerWidth,
-        	move: 0
+        	move: 0,
+        	level2: false
         };
         this.handleScroll = this.handleScroll.bind(this)
     }
@@ -35,6 +37,11 @@ class HelloWorld extends React.Component {
 	handleScroll(ev){
 		let height = document.body.scrollTop;
 		this.setState({move: height});
+		if(height >= 6340 && height <= 7712){
+			this.setState({level2: true});
+		}else{
+			this.setState({level2: false});
+		}
 	}
 
 	render() {
@@ -69,8 +76,12 @@ class HelloWorld extends React.Component {
 					<Tree move={this.state.move} position={5950} height={120} bigNum={150}/>
 					<Hobby move={this.state.move} position={5600}/>
 
+					<Level move={this.state.move} position={6400} words="LEVEL 2"/>	
+					
+					<div className={this.state.level2?'footer show':'footer'} style={{width:this.state.footerWidth}}></div>
+
+					<Skill move={this.state.move} position={6800}/>
 					<Person move={this.state.move}/>
-					<div className="footer" style={{width:this.state.footerWidth}}></div>
 				</div>
 			</div>
 		)
