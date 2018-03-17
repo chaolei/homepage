@@ -33,6 +33,7 @@ class Person extends React.Component {
 	render() {
 		return (
 			<div className={this.state.jump?'person up':(this.state.level2?'person level2':'person')}>
+				<div className={this.state.level2?"bubble show": "bubble"}></div>
 				<div className="head">
 					<div className="hair"><div className="hair-left"></div></div>
 					<div className="ear"></div>
@@ -60,8 +61,7 @@ class Person extends React.Component {
 				</div>
 				<div className="foot2 move">
 					<div className="shoes2"></div>
-				</div>
-				
+				</div>				
 			</div>
 		)
 	}

@@ -20,7 +20,7 @@ class Level extends React.Component {
     componentWillReceiveProps(nextProps) {
         let move = this.state.position - nextProps.move;
         this.setState({move: move});
-        if(nextProps.move >= 6350){
+        if(nextProps.move >= 6350 && nextProps.move <= 7712){
             this.setState({level2: true});
         }else{
             this.setState({level2: false});

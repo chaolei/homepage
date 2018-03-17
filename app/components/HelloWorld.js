@@ -77,6 +77,8 @@ class HelloWorld extends React.Component {
 					<Hobby move={this.state.move} position={5600}/>
 
 					<Level move={this.state.move} position={6400} words="LEVEL 2"/>	
+
+					<Level move={this.state.move} position={8600} words="LEVEL 3"/>	
 					
 					<div className={this.state.level2?'footer show':'footer'} style={{width:this.state.footerWidth}}></div>
 
