@@ -10,14 +10,23 @@ class Person extends React.Component {
         this.state = {
         	move: 0,
         	jump: false,
-        	level2: false
+			level2: false,
+			direct: 'right'
         }
     }
 
     componentWillReceiveProps(nextProps) {
-    	let move = 450 + nextProps.move;
-    	this.setState({move: move});
-    	console.log(nextProps.move);
+		let move = 450 + nextProps.move;
+		let {direct} = this.state;
+		if(nextProps.move < this.props.move){
+			direct = 'left';
+		}else if(nextProps.move > this.props.move){
+			direct = 'right';
+		}
+		if(nextProps.move == this.props.move && direct == 'left'){
+			direct = 'left';
+		}
+    	this.setState({move: move, direct: direct});
     	if(nextProps.move >= 3300 && nextProps.move <= 3700){
     		this.setState({jump: true});
     	}else{
@@ -34,7 +43,7 @@ class Person extends React.Component {
 		return (
 			<div className={this.state.jump?'person up':(this.state.level2?'person level2':'person')}>
 				<div className={this.state.level2?"bubble show": "bubble"}></div>
-				<div className="head">
+				<div className={this.state.direct+' head'}>
 					<div className="hair"><div className="hair-left"></div></div>
 					<div className="ear"></div>
 					<div className="mouse"></div>
