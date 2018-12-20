@@ -50,8 +50,8 @@ class HelloWorld extends React.Component {
 				<div className="scene">
 
 					<Welcome move={this.state.move}/>
-					<Cloud move={this.state.move} position={50} top={20}/>
-					<Cloud move={0} position={1150} top={100}/>
+					<Cloud text='蜀ICP备18023528号-1' move={this.state.move} position={50} top={20}/>
+					<Cloud text='Demo集' textUrl='/demoList.html' move={0} position={1150} top={100}/>
 					<Tree move={this.state.move} position={150} height={90} bigNum={150}/>
 					<Tree move={this.state.move} position={650} height={40} color='spe'/>
 					<Tree move={this.state.move} position={800} height={150} bigNum={200}/>
