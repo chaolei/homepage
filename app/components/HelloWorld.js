@@ -85,6 +85,10 @@ class HelloWorld extends React.Component {
 					<Skill move={this.state.move} position={6800}/>
 					<Person move={this.state.move}/>
 				</div>
+				<div className='copyright'>
+					<p>备案号：蜀ICP备18023528号-1</p>
+					<p>Copyright © 2019-2020 雷超版权所有</p>
+				</div>
 			</div>
 		)
 	}
